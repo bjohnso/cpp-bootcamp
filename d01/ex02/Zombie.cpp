@@ -14,14 +14,14 @@
 #include <iostream>
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string type, std::string name) : _type(type), _name(name){
+Zombie::Zombie(std::string name, std::string type) : _name(name), _type(type){
 	std::cout << "Zombie : " << _name << " Spawned" << std::endl;
 }
 
 Zombie::~Zombie(){
-	std::cout << "Zombie : " << _name << " Destroyed" << std::endl
+	std::cout << "Zombie : " << _name << " the " << _type <<" has at long last found the eternal sleep" << std::endl;
 }
 
-Zombie::announce(void){
-	std::cout << "I am " << _name << " of class " << _type << "\nRAWR!" << std::endl;
+void Zombie::announce(void) {
+	std::cout << "Alas I am " << _name << " the " << _type << "\nI live once more!" << std::endl;
 }

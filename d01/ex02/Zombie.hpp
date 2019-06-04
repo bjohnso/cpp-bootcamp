@@ -12,16 +12,18 @@
 
 #ifndef ZOMBIE_CLASS_H
 # define ZOMBIE_CLASS_H
+
 #include <stdio.h>
 #include <iostream>
 
 class Zombie{
 	public:
-	Zombie(std::string name, std::string name) : _type(type), _name(name);
-	~Zombie(void);
-	void announce(void);
+		Zombie(std::string name, std::string type);
+		~Zombie(void);
+		void announce(void);
 	
 	private:
-	std::string type;
-	std::string name;
-}
+		std::string _name;
+		std::string _type;
+};
+#endif

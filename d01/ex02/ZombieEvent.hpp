@@ -18,10 +18,13 @@
 
 class ZombieEvent{
 	private:
-		std::string type;
+		std::string _type;
 
 	public:
-		ZombieEvent(std::string _type) : _type(type);
+		ZombieEvent(void);
+		void setZombieType(std::string type);
+		Zombie* newZombie(std::string name);
 		~ZombieEvent(void);
-		void setZombieType
-}
+		Zombie* randomChump(void);
+};
+#endif
